@@ -1,4 +1,4 @@
-package com.example.seamasshih.videoplayer;
+package com.fxc.myvideoplayer;
 
 import org.junit.Test;
 

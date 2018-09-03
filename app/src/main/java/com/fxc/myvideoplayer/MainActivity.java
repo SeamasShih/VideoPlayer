@@ -1,7 +1,9 @@
-package com.example.seamasshih.videoplayer;
+package com.fxc.myvideoplayer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.fxc.videoplayer.R;
 
 public class MainActivity extends AppCompatActivity {
 
