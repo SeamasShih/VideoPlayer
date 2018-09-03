@@ -1,5 +1,11 @@
 package com.fxc.myvideoplayer;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.Uri;
+import android.provider.MediaStore;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -48,6 +54,43 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+
+            //todo complete setting function in here
+
+            //Seamas-----------------------------------------------------------
+            Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
+            String[] projections = {
+                    MediaStore.Video.Media.ALBUM
+            };
+            String order = MediaStore.Video.Media.DATE_MODIFIED + " DESC";
+            if (ActivityCompat.checkSelfPermission(
+                    MainActivity.this,
+                    Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)
+                ActivityCompat.requestPermissions(
+                        MainActivity.this,
+                        new String[] {Manifest.permission.READ_EXTERNAL_STORAGE,
+                                Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        5566);
+            try {
+                Cursor imageCursor = getContentResolver().query(
+                        uri,
+                        projections,
+                        null,
+                        null,
+                        order
+                );
+                if (imageCursor != null) {
+                    while (imageCursor.moveToNext()) {
+                        Log.d("Seamas", "album : " + imageCursor.getString(0));
+                    }
+                    imageCursor.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            //-----------------------------------------------------------
+
+
             return true;
         } else if (id == R.id.action_search) {
             Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
