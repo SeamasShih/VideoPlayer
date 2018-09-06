@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             //todo complete setting function in here
 
             //Seamas-----------------------------------------------------------
-            Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
+           /* Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
             String[] projections = {
                     MediaStore.Video.Media.ALBUM
             };
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
-            }
+            }*/
             //-----------------------------------------------------------
 
 
