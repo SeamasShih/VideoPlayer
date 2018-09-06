@@ -1,4 +1,4 @@
-package com.fxc.myvideoplayer;
+package com.fxc.myvideoplayer.VideoList;
 
 public class VideoItems {
     private String video_name;

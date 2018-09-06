@@ -1,4 +1,4 @@
-package com.fxc.myvideoplayer;
+package com.fxc.myvideoplayer.VideoList;
 
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 
 import android.util.Log;
 
+
+import com.fxc.myvideoplayer.R;
 
 import java.util.List;
 

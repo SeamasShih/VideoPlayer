@@ -1,8 +1,9 @@
-package com.fxc.myvideoplayer;
+package com.fxc.myvideoplayer.FolderList;
+
+import com.fxc.myvideoplayer.R;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class FolderFactory {
 

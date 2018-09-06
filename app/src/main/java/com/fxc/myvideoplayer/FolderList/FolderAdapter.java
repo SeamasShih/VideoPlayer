@@ -1,19 +1,18 @@
-package com.fxc.myvideoplayer;
+package com.fxc.myvideoplayer.FolderList;
 
 import android.content.Context;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
-import android.support.constraint.Constraints;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.fxc.myvideoplayer.VideoList.FileListActivity;
+import com.fxc.myvideoplayer.R;
 
 import java.util.List;
 

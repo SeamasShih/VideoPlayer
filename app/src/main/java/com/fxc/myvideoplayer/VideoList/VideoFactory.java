@@ -1,4 +1,6 @@
-package com.fxc.myvideoplayer;
+package com.fxc.myvideoplayer.VideoList;
+
+import com.fxc.myvideoplayer.R;
 
 import java.util.ArrayList;
 import java.util.List;

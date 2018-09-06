@@ -1,21 +1,16 @@
-package com.fxc.myvideoplayer;
+package com.fxc.myvideoplayer.FolderList;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.net.Uri;
-import android.provider.MediaStore;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
+
+import com.fxc.myvideoplayer.R;
 
 import java.util.List;
 

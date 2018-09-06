@@ -1,4 +1,4 @@
-package com.fxc.myvideoplayer;
+package com.fxc.myvideoplayer.FolderList;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

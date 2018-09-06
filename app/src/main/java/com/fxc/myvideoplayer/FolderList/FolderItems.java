@@ -1,4 +1,4 @@
-package com.fxc.myvideoplayer;
+package com.fxc.myvideoplayer.FolderList;
 
 public class FolderItems {
 private String folder_cat_name;
