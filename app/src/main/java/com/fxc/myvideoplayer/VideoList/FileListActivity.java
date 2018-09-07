@@ -3,6 +3,7 @@ package com.fxc.myvideoplayer.VideoList;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -58,6 +59,7 @@ public class FileListActivity extends AppCompatActivity {
         if (id == R.id.action_layout_list) {
             layoutManager = new LinearLayoutManager(
                     this);
+//            videoRecyclerView.setLayoutManager(layoutManager);
             adapter.notifyDataSetChanged();
 
             return true;
@@ -65,6 +67,7 @@ public class FileListActivity extends AppCompatActivity {
             layoutManager = new StaggeredGridLayoutManager(
                     2, StaggeredGridLayoutManager.VERTICAL
             );
+//            videoRecyclerView.setLayoutManager(layoutManager);
             adapter.notifyDataSetChanged();
             return true;
         }
