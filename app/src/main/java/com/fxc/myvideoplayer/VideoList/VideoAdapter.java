@@ -52,16 +52,12 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder> 
 
         SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
         String time = sdf.format(new Date(videoItem.get_video_duration()));
-        holder.video_duration.setText("播放时长："+time);
-
-   // holder.video_duration.setText(videoItem.get_video_duration());
-
+        holder.video_duration.setText(time);
         //      获取视频缩略图，显示缩略图
         Bitmap thumbnail = ThumbnailUtils.createVideoThumbnail
                 (videoItem.get_video_path(), MediaStore.Video.Thumbnails.MINI_KIND);
         holder.video_image.setImageBitmap(thumbnail);
     }
-
     @Override
     public int getItemCount() {
         return videos.size();

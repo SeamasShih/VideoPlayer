@@ -29,7 +29,7 @@ public class FileListActivity extends AppCompatActivity {
     RecyclerView videoRecyclerView;
     RecyclerView.LayoutManager layoutManager;
     VideoAdapter adapter;
-    List<VideoItems> videos;
+    List<VideoItems> videos= new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +75,7 @@ public class FileListActivity extends AppCompatActivity {
             long video_duration = cursor.getLong(cursor.getColumnIndex(MediaStore.Video.Media.DURATION));
             Log.i("74","video_duration"+video_duration);
             //long size = cursor.getLong(cursor.getColumnIndex(MediaStore.Video.Media.SIZE));
-            VideoItems videoItem = new VideoItems(video_name, video_duration);
+            VideoItems videoItem = new VideoItems(video_name, video_duration,video_path);
             list.add(videoItem);
 
         }
