@@ -1,6 +1,9 @@
 package com.fxc.myvideoplayer.VideoList;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.media.ThumbnailUtils;
+import android.provider.MediaStore;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,6 +16,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.fxc.myvideoplayer.R;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder> {
@@ -38,11 +43,23 @@ public class VideoAdapter extends RecyclerView.Adapter<VideoAdapter.ViewHolder> 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
     VideoItems videoItem = videos.get(position);
-    Glide.with(context)
+
+
+    /*Glide.with(context)
             .load(videoItem.get_image_Resource())
-            .into(holder.video_image);
+            .into(holder.video_image);*/
     holder.video_name.setText(videoItem.get_video_name());
-    holder.video_duration.setText(videoItem.get_video_duration());
+
+        SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
+        String time = sdf.format(new Date(videoItem.get_video_duration()));
+        holder.video_duration.setText("播放时长："+time);
+
+   // holder.video_duration.setText(videoItem.get_video_duration());
+
+        //      获取视频缩略图，显示缩略图
+        Bitmap thumbnail = ThumbnailUtils.createVideoThumbnail
+                (videoItem.get_video_path(), MediaStore.Video.Thumbnails.MINI_KIND);
+        holder.video_image.setImageBitmap(thumbnail);
     }
 
     @Override

@@ -1,7 +1,9 @@
 package com.fxc.myvideoplayer.VideoList;
 
+import android.content.ContentResolver;
 import android.content.Context;
 import android.database.Cursor;
+import android.net.Uri;
 import android.provider.MediaStore;
 
 import com.fxc.myvideoplayer.R;
@@ -9,7 +11,7 @@ import com.fxc.myvideoplayer.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VideoFactory {
+/*public class VideoFactory {
     private static int[] image_Resources = {
             R.drawable.item1,R.drawable.item2,R.drawable.item3,R.drawable.item4
     };
@@ -17,8 +19,8 @@ public class VideoFactory {
             {"11.mp4", "22.mp4", "33.mp4","44.mp4"};
 
     private static String[] video_durations =
-            {"5:11", "5:12", "5:12","5:12"};
-
+            {"5:11", "5:12", "5:12","5:12"};*/
+/*
     public static List<VideoItems> create_videos(int num) {
 
         List<VideoItems> videos = new ArrayList<>();
@@ -32,6 +34,6 @@ public class VideoFactory {
             videos.add(new VideoItems(image_Resource, video_name, video_duration));
         }
         return videos;
-    }
+    }*/
 
-}
+//}
