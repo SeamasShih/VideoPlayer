@@ -59,7 +59,7 @@ public class FileListActivity extends AppCompatActivity {
         if (id == R.id.action_layout_list) {
             layoutManager = new LinearLayoutManager(
                     this);
-//            videoRecyclerView.setLayoutManager(layoutManager);
+            videoRecyclerView.setLayoutManager(layoutManager);
             adapter.notifyDataSetChanged();
 
             return true;
@@ -67,8 +67,8 @@ public class FileListActivity extends AppCompatActivity {
             layoutManager = new StaggeredGridLayoutManager(
                     2, StaggeredGridLayoutManager.VERTICAL
             );
-//            videoRecyclerView.setLayoutManager(layoutManager);
-            adapter.notifyDataSetChanged();
+          videoRecyclerView.setLayoutManager(layoutManager);
+          adapter.notifyDataSetChanged();
             return true;
         }
         return super.onOptionsItemSelected(item);

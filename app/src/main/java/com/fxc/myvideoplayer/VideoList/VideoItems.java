@@ -5,6 +5,10 @@ public class VideoItems {
     private String video_duration;
     private int image_Resource;
 
+    public VideoItems(){
+
+    }
+
     public VideoItems(int image_Resource, String video_name, String video_duration) {
         this.image_Resource = image_Resource;
         this.video_name = video_name;

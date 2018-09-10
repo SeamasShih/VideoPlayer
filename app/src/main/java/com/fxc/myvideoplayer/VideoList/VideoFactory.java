@@ -1,5 +1,9 @@
 package com.fxc.myvideoplayer.VideoList;
 
+import android.content.Context;
+import android.database.Cursor;
+import android.provider.MediaStore;
+
 import com.fxc.myvideoplayer.R;
 
 import java.util.ArrayList;
@@ -29,4 +33,5 @@ public class VideoFactory {
         }
         return videos;
     }
+
 }
