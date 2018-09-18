@@ -57,7 +57,6 @@ public class FileListActivity extends AppCompatActivity {
         loadData();
     }
 
-
     private void loadData() {
         List<VideoItems> list = new ArrayList<>();
 //        1.获取ContentResolver对象
@@ -77,7 +76,6 @@ public class FileListActivity extends AppCompatActivity {
             //long size = cursor.getLong(cursor.getColumnIndex(MediaStore.Video.Media.SIZE));
             VideoItems videoItem = new VideoItems(video_name, video_duration,video_path);
             list.add(videoItem);
-
         }
         videos.addAll(list);
         Log.i("78","list"+videos.get(0));
